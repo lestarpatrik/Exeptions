@@ -1,0 +1,52 @@
+nav {
+  height: 6rem;
+  position: relative;
+}
+
+.nav-icon {
+  font-size: 2rem;
+  margin: 2rem;
+  display: inline-block;
+}
+
+nav p {
+  font-size: 2rem;
+  position: absolute;
+  top: calc(50% - 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+}
+
+.cart-icon {float: right;}
+
+.computer-view a {
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  transition: .5s;
+  padding: 2.4rem 1rem;
+}
+
+.computer-view {
+  display: none;
+  position: absolute;
+  top: calc(50% - .6rem);
+  right: calc(50% - 25rem);
+}
+
+.computer-view a:hover {
+  background-color: rgba(230,230,230,.5);
+}
+
+
+
+
+@media (min-width: 1024px)  {
+
+  .nav-icon { display: none;}
+
+  nav p {left: calc(50% - 20rem);}
+
+  .computer-view {display: block;}
+
+}
