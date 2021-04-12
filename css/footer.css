@@ -1,0 +1,25 @@
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 7vh;
+  text-align: center;
+  background-color: black;
+  font-size: .9rem;
+  color: snow;
+  padding: .5rem 1rem;
+}
+
+  footer p {
+    margin-bottom: 0;
+  }
+
+  footer small {
+    line-height: 1.5;
+  }
