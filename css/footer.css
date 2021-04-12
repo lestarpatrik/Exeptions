@@ -7,11 +7,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 7vh;
+  height: 6rem;
   text-align: center;
   background-color: black;
-  font-size: .9rem;
+  font-size: 1rem;
   color: snow;
   padding: .5rem 1rem;
 }

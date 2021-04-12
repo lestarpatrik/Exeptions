@@ -20,22 +20,18 @@ nav p {
 
 .cart-icon {float: right;}
 
-.computer-view a {
-  font-size: 1.2rem;
+.nav-list a {
+  text-align: center;
+  display: block;
+  font-size: 1.5rem;
   letter-spacing: .1rem;
-  transition: .5s;
-  padding: 2.4rem 1rem;
+  padding: 2rem;
+  background-color: white;
+  border-top: 1px solid gray;
 }
 
-.computer-view {
+.nav-list {
   display: none;
-  position: absolute;
-  top: calc(50% - .6rem);
-  right: calc(50% - 25rem);
-}
-
-.computer-view a:hover {
-  background-color: rgba(230,230,230,.5);
 }
 
 
@@ -47,6 +43,22 @@ nav p {
 
   nav p {left: calc(50% - 20rem);}
 
-  .computer-view {display: block;}
+  .nav-list {
+    display: block !important;
+    position: absolute;
+    top: calc(50% - .6rem);
+    right: calc(50% - 25rem);
+  }
+
+  .nav-list a {
+    display: inline;
+    font-size: 1.2rem;
+    transition: .5s;
+    padding: 2.4rem 1rem;
+    text-align: left;
+    border: none;
+  }
+
+  .nav-list a:hover {background-color: rgba(230,230,230,.5);}
 
 }
