@@ -3,36 +3,43 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/elerhetosegek.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/401c4fe106.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="main.js" charset="utf-8"></script>
+    <script src="js/navbar.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Exeptions | Elérhetőségek</title>
+    <title>Exeptions | Cart</title>
   </head>
   <body>
     <nav>
       <a class="menu-icon nav-icon"><i class="fas fa-bars"></i></a>
-      <p class="company-name">exeptions</p>
-      <a class="cart-icon nav-icon"><i class="fas fa-shopping-cart"></i></a>
+      <a href="index.html" class="company-name">exeptions</a>
+      <a class="cart-icon nav-icon" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
       <div class="nav-list">
         <a href="index.html">főoldal</a>
-        <a href="termekek.html">termékek</a>
-        <a href="#">kosár</a>
-        <a href="elerhetosegek.html">elérhetőség</a>
+        <a href="products.html">termékek</a>
+        <a href="cart.html">kosár</a>
+        <a href="contact.html">elérhetőség</a>
       </div>
     </nav>
     <main>
-      <section class="contact">
-        <h2>Contact</h2>
-        <p>If you have any questions, or you would like to report something, feel free to write us!</p>
-        <p>Email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
-        <i class="fas fa-phone"></i>
-      </section>
+      <div class="cart">
+        <h1>Cart</h1>
+        <div class="cart-content">
+          <div class="cart-row">
+            <img src="assets/products/test/test.jpg" alt="">
+            <p class="cart-item-name">Billentyűzet</p>
+            <input type="number" class="cart-item-quantity" value="1">
+            <button type="button" class="cart-item-remove"><i class="far fa-trash-alt"></i></button>
+            <p class="cart-item-price">120.000Ft</p>
+          </div>
+        </div>
+        <button class="purchase-button" type="button">Purchase</button>
+      </div>
     </main>
     <footer class="footer">
       <p><small>©2021 Exeptions | All rights reserved.</small></p>
