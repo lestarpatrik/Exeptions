@@ -1,8 +1,15 @@
-.content {padding: 11rem 2rem 10rem;}
+.content, .products-page {padding: 11rem 2rem 10rem;}
 
 .banner {
   margin: .5rem;
   cursor: pointer;
+}
+
+.products-page h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .banner img, .product img {width: 100%;}
@@ -30,7 +37,7 @@
 
 .product a:hover {
   color: blue;
-  transition: .5s;
+  transition: .2s;
 }
 
 .product button {
@@ -64,7 +71,7 @@
 
 @media (min-width: 1024px) {
 
-  .content {padding: 11rem calc(50% - 30rem) 10rem;}
+  .content, .products-page {padding: 11rem calc(50% - 30rem) 10rem;}
 
   .product button:hover {
     background-color: white;
@@ -79,8 +86,12 @@
     margin: 0 10%;
   }
 
-  .content {padding: 11rem calc(50% - 40rem) 10rem;}
+  .content, .products-page {padding: 11rem calc(50% - 40rem) 10rem;}
 
   .product {width: calc(25% - 1rem);}
+
+  .products-page .product {width: calc(33% - 1rem);}
+
+  .products-page button {margin: 1.5rem 0 1rem;}
 
 }
