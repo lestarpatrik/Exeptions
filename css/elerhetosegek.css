@@ -5,8 +5,7 @@
 .contact {
   font-size: 1rem;
   text-align: center;
-  margin: 1.5rem auto;
-  padding: .5rem 1rem;
+  padding: 5rem 1rem;
   line-height: 1.5;
 }
 
@@ -31,4 +30,14 @@
   width: 14rem;
   margin: .5rem auto;
   margin-bottom: 2rem;
+}
+
+.contact i {
+  font-size: 7rem;
+  margin-top: 3rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
 }
