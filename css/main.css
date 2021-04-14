@@ -84,6 +84,22 @@ border-spacing: 0;
     margin: 0;
   }
 
+  .product button {
+    border: none;
+    background-color: black;
+    width: 100%;
+    color: white;
+    height: 3rem;
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1rem 0 .5rem;
+    transition: 0.3s;
+    border: 2px solid black;
+  }
+
 /* Firefox */
   input[type=number] {
     -moz-appearance: textfield;
