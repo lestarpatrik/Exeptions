@@ -1,4 +1,4 @@
-p {
+.product-info p {
   font-size: 1.1rem;
   text-align: center;
   margin: 1rem;
@@ -17,9 +17,7 @@ h2 {
   margin: 1rem;
 }
 
-.container {
-  padding: 6rem 5% 10rem;
-}
+.container {padding: 6rem 5% 10rem;}
 
 .content {
   min-height: calc(100vh - 50px);
@@ -28,6 +26,7 @@ h2 {
   width: 100%;
   margin: 1rem 0;
 }
+
 
 @media (min-width: 425px) {
 

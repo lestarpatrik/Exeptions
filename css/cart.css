@@ -1,7 +1,7 @@
 .cart {padding: 11rem 2rem 10rem;}
 
 .cart h1::after {
-  width: 40rem;
+  width: 90%;
   height: 1px;
   background-color: black;
   content: "";
@@ -75,8 +75,7 @@
 
 .cart-total-box {
   margin-top: 1rem;
-  float: right;
-  margin-right: calc(50% - 20rem);
+  text-align: center;
 }
 
 .cart-total-text, .cart-total {
@@ -89,9 +88,16 @@
 
 @media (min-width: 768px) {
 
-  .cart-row {
+  .cart-row, .cart h1::after {
     width: 40rem;
     margin: 0 calc(50% - 20rem);
+  }
+
+  .cart h1::after {margin: 2rem calc(50% - 20rem) 0;}
+
+  .cart-total-box {
+    margin-right: calc(50% - 20rem);
+    float: right;
   }
 
 }

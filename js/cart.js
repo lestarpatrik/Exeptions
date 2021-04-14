@@ -34,7 +34,6 @@ $(document).ready(function(){
         var imageSrc = localStorage.getItem('imageSrc' + i);
         var productName = localStorage.getItem('productName' + i);
         var productPrice = localStorage.getItem('productPrice' + i);
-        console.log(productName);
         addItemToCart(imageSrc, productName, productPrice, i)
       } else {
         return true;
@@ -45,9 +44,15 @@ $(document).ready(function(){
 
   //Save product's informations when "add to cart button" is clicked
   $('button[name=addtocart]').click(function(){
-    var imageSrc = $(this).siblings('img').attr('src');
+    $('.product-added-to-cart-bg').show();
     var productName = $(this).siblings('.product-name').text();
     var productPrice =  $(this).siblings('.product-price').text();
+
+    if ($('.product-info').length) {
+      var imageSrc = $(this).parent().siblings('img').attr('src').replace('../', '');
+    } else {
+      var imageSrc = $(this).siblings('img').attr('src');
+    }
 
     var i = 1;
 
@@ -67,12 +72,24 @@ $(document).ready(function(){
     }
   })
 
+  //Hide message when "continue shopping" is clicked
+  $('button[name=continue-shopping]').click(function(){
+    $('.product-added-to-cart-bg').hide();
+  })
+
   //Add item to cart
   function addItemToCart(imageSrc, productName, productPrice, i) {
     var cartRow = document.createElement('div');
     $(cartRow).addClass('cart-row');
     $(cartRow).attr('id', i);
     var cartItems = $('.cart-content');
+    var cartItemNames = $('.cart-item-name');
+    for (var j = 0; j < cartItemNames.length; j++) {
+      if ($(cartItemNames[j]).text() == productName) {
+        localStorage.removeItem('productName' + i);
+        return;
+      }
+    }
     var cartRowContents = `
       <img src="${imageSrc}" alt="">
       <p class="cart-item-name">${productName}</p>

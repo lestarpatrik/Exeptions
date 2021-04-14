@@ -17,36 +17,39 @@
     <title>Exeptions | Products</title>
   </head>
   <body>
-    <div class="content">
-      <nav>
-        <a class="menu-icon nav-icon"><i class="fas fa-bars"></i></a>
-        <a href="index.html" class="company-name">exeptions</a>
-        <a class="cart-icon nav-icon" href="../cart.html"><i class="fas fa-shopping-cart"></i></a>
-        <div class="nav-list">
-          <a href="../index.html">főoldal</a>
-          <a href="../products.html">termékek</a>
-          <a href="../cart.html">kosár</a>
-          <a href="../contact.html">elérhetőség</a>
-        </div>
-      </nav>
-      <main>
-        <div class="product container">
-          <img class="product-image" src="../assets/products/test/keyboard.png">
-          <div class="product-info">
-            <div class="product-name">
-              <h1>Keyboard</h1>
-            </div>
-            <div class="product-cost">
-              <h2>30 €</h2>
-              <p><small>including tax, plus shipping</small></p>
-            </div>
-            <button type="button" name="addtocart">Add to cart</button>
-            <p class="delivery-time">Delivery Time 1-3 weeks</p>
-            <p class="description">Use this text to briefly describe your product. What is it, and what does it do?</p>
-          </div>
-        </div>
-      </main>
+    <nav>
+      <a class="menu-icon nav-icon"><i class="fas fa-bars"></i></a>
+      <a href="../index.html" class="company-name">exeptions</a>
+      <a class="cart-icon nav-icon" href="../cart.html"><i class="fas fa-shopping-cart"></i></a>
+      <div class="nav-list">
+        <a href="../index.html">main page</a>
+        <a href="../products.html">products</a>
+        <a href="../cart.html">cart</a>
+        <a href="../contact.html">contact</a>
+      </div>
+    </nav>
+    <div class="product-added-to-cart-bg">
+      <div class="product-added-to-cart">
+        <h2>This product has been added to your cart!</h2>
+        <button type="button" name="continue-shopping">Continue shopping</button>
+        <button type="button" name="go-to-cart" onclick="location.href='cart.html';">Go to cart</button>
+      </div>
     </div>
+    <main>
+      <div class="product container">
+        <img class="product-image" src="../assets/products/test/keyboard.png">
+        <div class="product-info">
+          <div class="product-name">
+            <h1>Keyboard</h1>
+          </div>
+          <h2 class="product-price">30 €</h2>
+          <p><small>including tax, plus shipping</small></p>
+          <button type="button" name="addtocart">Add to cart</button>
+          <p class="delivery-time">Delivery Time 1-3 weeks</p>
+          <p class="description">Use this text to briefly describe your product. What is it, and what does it do?</p>
+        </div>
+      </div>
+    </main>
     <footer class="footer">
       <p><small>©2021 Exeptions | All rights reserved.</small></p>
     </footer>
