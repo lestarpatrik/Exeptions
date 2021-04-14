@@ -86,10 +86,6 @@
 
 .cart-total-text {font-weight: 600;}
 
-footer {
-  position: absolute;
-  bottom: 0;
-}
 
 @media (min-width: 768px) {
 
@@ -103,10 +99,12 @@ footer {
 
 @media (min-width: 1024px) {
 
-  .cart-row {
+  .cart-row, .cart h1::after {
     width: 50rem;
     margin: 0 calc(50% - 25rem);
   }
+
+  .cart h1::after {margin-top: 2rem;}
 
   .cart-row img {height: 10rem;}
 
