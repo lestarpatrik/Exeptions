@@ -1,0 +1,97 @@
+.content, .products-page {padding: 11rem 2rem 10rem;}
+
+.banner {
+  margin: .5rem;
+  cursor: pointer;
+}
+
+.products-page h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.banner img, .product img {width: 100%;}
+
+.product {
+  width: 90%;
+  margin: .5rem 5%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.product h2, .product h3, .product a {
+  text-align: center;
+  line-height: 1.7rem;
+}
+
+.product h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.product h3 {font-size: 1.2rem;}
+
+.product a {font-size: 1rem;}
+
+.product a:hover {
+  color: blue;
+  transition: .2s;
+}
+
+.product button {
+  border: none;
+  background-color: black;
+  width: 100%;
+  color: white;
+  height: 3rem;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 1rem 0 .5rem;
+  transition: 0.3s;
+  border: 2px solid black;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+  .product {
+    width: calc(50% - 1rem);
+    margin: .5rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .content, .products-page {padding: 11rem calc(50% - 30rem) 10rem;}
+
+  .product button:hover {
+    background-color: white;
+    color: black;
+  }
+
+}
+@media (min-width: 1440px) {
+
+  .banner img {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  .content, .products-page {padding: 11rem calc(50% - 40rem) 10rem;}
+
+  .product {width: calc(25% - 1rem);}
+
+  .products-page .product {width: calc(33% - 1rem);}
+
+  .products-page button {margin: 1.5rem 0 1rem;}
+
+}
