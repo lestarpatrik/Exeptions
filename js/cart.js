@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+  //
+  function emptyCart() {
+    if($('.cart-content').children().length == 0) {
+      $('.empty-cart-message').show();
+    } else {
+      $('.empty-cart-message').hide();
+    }
+  }
+
   //Remove cart item
   $('.cart-content').on("click", ".cart-item-remove", function(){
     var i = $(this).parent().attr('id');
@@ -11,6 +20,7 @@ $(document).ready(function(){
     localStorage.removeItem('productPrice' + i);
 
     updateCartTotal();
+    emptyCart();
   })
 
   //Updates the cart total when quantity changed
@@ -25,6 +35,7 @@ $(document).ready(function(){
 
   //Download cart items
   if ($('.cart-content').length) {
+    emptyCart();
 
     var i = 1;
 
@@ -99,6 +110,7 @@ $(document).ready(function(){
     cartRow.innerHTML = cartRowContents;
     cartItems.append(cartRow);
     updateCartTotal();
+    emptyCart();
   }
 
   //Updates the cart total
