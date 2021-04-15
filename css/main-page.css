@@ -1,9 +1,5 @@
-.content, .products-page {padding: 11rem 2rem 10rem;}
 
-.banner {
-  margin: .5rem;
-  cursor: pointer;
-}
+.content, .products-page {padding: 11rem 2rem 10rem;}
 
 .products-page h1 {
   font-size: 3rem;
@@ -12,7 +8,7 @@
   text-align: center;
 }
 
-.banner img, .product img {width: 100%;}
+.product img {width: 100%;}
 
 .product {
   width: 90%;
@@ -55,9 +51,6 @@
   transition: 0.3s;
   border: 2px solid black;
 }
-
-
-
 
 
 @media (min-width: 768px) {
