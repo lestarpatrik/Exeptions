@@ -5,20 +5,18 @@ nav {
   background-color: rgb(255,255,255);
 }
 
+nav img {
+  height: 6rem;
+  position: absolute;
+  left: calc(50% - 6rem);
+  cursor: pointer;
+}
+
 .nav-icon {
   font-size: 1.5rem;
   margin: 2rem;
   display: inline-block;
   cursor: pointer;
-}
-
-.company-name {
-  font-size: 1.5rem;
-  position: absolute;
-  top: calc(50% - .75rem);
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 600;
 }
 
 .cart-icon {float: right;}
@@ -54,7 +52,7 @@ nav {
 
   .nav-icon { display: none;}
 
-  .company-name {left: calc(50% - 20rem);}
+  nav img {left: calc(50% - 20rem);}
 
   .nav-list {
     display: block !important;

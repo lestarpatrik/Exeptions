@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  //
+  //Show message when cart is empty
   function emptyCart() {
     if($('.cart-content').children().length == 0) {
       $('.empty-cart-message').show();
@@ -8,6 +8,14 @@ $(document).ready(function(){
       $('.empty-cart-message').hide();
     }
   }
+
+  //Remove every item from cart when clicking pusrchase
+  $('.purchase-button').click(function(){
+    $('.cart-content').children().remove();
+    localStorage.clear();
+    emptyCart();
+    updateCartTotal();
+  })
 
   //Remove cart item
   $('.cart-content').on("click", ".cart-item-remove", function(){
