@@ -71,6 +71,8 @@ border-spacing: 0;
     cursor: pointer;
   }
 
+  body {margin: 0;}
+
   h1 {
     font-size: 3rem;
     font-weight: 600;
