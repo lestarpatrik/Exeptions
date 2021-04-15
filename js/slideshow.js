@@ -1,5 +1,5 @@
-<script type: "text/javascript">
 var counter = 1;
+
 setInterval(function(){
   document.getElementById('radio' + counter).checked = true;
   counter++;
@@ -7,4 +7,3 @@ setInterval(function(){
     counter = 1;
   }
 }, 5000);
-</script>
