@@ -9,6 +9,14 @@ $(document).ready(function(){
     }
   }
 
+  //Remove every item from cart when clicking purchase
+  $('.purchase-button').click(function(){
+    $('.cart-content').children().remove();
+    localStorage.clear();
+    emptyCart();
+    updateCartTotal();
+  })
+
   //Remove cart item
   $('.cart-content').on("click", ".cart-item-remove", function(){
     var i = $(this).parent().attr('id');
@@ -45,8 +53,7 @@ $(document).ready(function(){
         var imageSrc = localStorage.getItem('imageSrc' + i);
         var productName = localStorage.getItem('productName' + i);
         var productPrice = localStorage.getItem('productPrice' + i);
-        var id = localStorage.getItem('id');
-        addItemToCart(imageSrc, productName, productPrice, i, id)
+        addItemToCart(imageSrc, productName, productPrice, i)
       } else {
         return true;
       }
@@ -57,10 +64,8 @@ $(document).ready(function(){
   //Save product's informations when "add to cart button" is clicked
   $('button[name=addtocart]').click(function(){
     $('.product-added-to-cart-bg').show();
-    var shopItem = $(this).parent();
     var productName = $(this).siblings('.product-name').text();
     var productPrice =  $(this).siblings('.product-price').text();
-    var id = $(shopItem).attr('data-item-id');
 
     if ($('.product-info').length) {
       var imageSrc = $(this).parent().siblings('img').attr('src').replace('../', '');
@@ -80,8 +85,6 @@ $(document).ready(function(){
         localStorage.setItem(imageSrcItem, imageSrc);
         localStorage.setItem(productNameItem, productName);
         localStorage.setItem(productPriceItem, productPrice);
-        localStorage.setItem('id', id);
-
         return true;
       }
       i++;
@@ -94,10 +97,9 @@ $(document).ready(function(){
   })
 
   //Add item to cart
-  function addItemToCart(imageSrc, productName, productPrice, i, id) {
+  function addItemToCart(imageSrc, productName, productPrice, i) {
     var cartRow = document.createElement('div');
     $(cartRow).addClass('cart-row');
-    cartRow.dataset.itemId = id;
     $(cartRow).attr('id', i);
     var cartItems = $('.cart-content');
     var cartItemNames = $('.cart-item-name');

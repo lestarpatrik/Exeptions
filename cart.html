@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,8 +12,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/navbar.js" charset="utf-8"></script>
     <script src="js/cart.js" charset="utf-8"></script>
+    <script src="js/order.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Exeptions | Contact</title>
+    <title>Exeptions | Cart</title>
   </head>
   <body>
     <nav>
@@ -28,12 +29,16 @@
       </div>
     </nav>
     <main>
-      <section class="contact">
-        <h2>Contact</h2>
-        <p>If you have any questions, or you would like to report something, feel free to write us!</p>
-        <p>Email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
-        <i class="fas fa-phone"></i>
-      </section>
+      <div class="cart">
+        <h1>Cart</h1>
+        <div class="cart-content"></div>
+        <p class="empty-cart-message">Your shopping cart is currently empty.</p>
+        <div class="cart-total-box">
+          <p class="cart-total-text">Total: </p>
+          <p class="cart-total">€0</p>
+        </div>
+        <button class="purchase-button" type="button">Purchase</button>
+      </div>
     </main>
     <footer class="footer">
       <p><small>©2021 Exeptions | All rights reserved.</small></p>
