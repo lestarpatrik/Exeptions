@@ -9,9 +9,9 @@
   line-height: 1.5;
 }
 
-.contact h2 {
+.contact h1 {
   font-size: 3rem;
-  margin-top: 4.5rem;
+  margin-top: 6.5rem;
 }
 
 .contact p {
@@ -22,7 +22,7 @@
 .contact a {
   font-style: italic;
 }
-.contact h2::after {
+.contact h1::after {
   display: block;
   content: "";
   background-color: black;

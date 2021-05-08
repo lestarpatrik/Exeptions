@@ -6,10 +6,11 @@ nav {
   z-index: 5;
 }
 
-nav img {
+nav h1 {
   height: 6rem;
+  text-transform: lowercase;
   position: absolute;
-  left: calc(50% - 6rem);
+  left: calc(50% - 3rem);
   cursor: pointer;
 }
 
@@ -23,6 +24,8 @@ nav img {
 .cart-icon {float: right;}
 
 .nav-list a {
+  font-family: 'Aqua Grotesque', sans-serif;
+  text-transform: uppercase;
   text-align: center;
   display: block;
   font-size: 1.5rem;
