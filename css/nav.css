@@ -6,8 +6,15 @@ nav {
   z-index: 5;
 }
 
+nav img {
+  height: 6rem;
+  position: absolute;
+  left: calc(50% - 6rem);
+  cursor: pointer;
+}
+
 .nav-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 2rem;
   display: inline-block;
   cursor: pointer;
@@ -31,8 +38,6 @@ nav {
 
 
 @media (min-width: 768px) {
-
-  .nav-icon {font-size: 2rem;}
 
   .company-name {
     font-size: 2rem;
