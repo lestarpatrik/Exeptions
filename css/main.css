@@ -1,188 +1,138 @@
-/*===================================
-
-             CSS RESET
-
-=====================================*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-display: block;
-}
-body {
-line-height: 1;
-font-size: 0;
-}
-ol, ul {
-list-style: none;
-}
-blockquote, q {
-quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-content: '';
-content: none;
-}
-table {
-border-collapse: collapse;
-border-spacing: 0;
+main {
+  text-align: center;
+  margin-top: 3rem;
 }
 
+main img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
+.comment {padding: 3rem 2rem;}
 
-/*===================================
+.comment p, .comment h3 {color: white;}
 
-             GENERAL
+.comment h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
 
-=====================================*/
+.comment img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  display: inline-block;
+}
 
-  * {
-    box-sizing:  border-box;
+.date {
+  text-align: right;
+  margin-top: .5rem;
+  font-style: italic;
+}
+
+button[name=learn-more] {
+  border: 3px solid white;
+  background-color: white;
+  font-size: 1.3rem;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: .5rem;
+  transition: .2s;
+}
+
+button[name=learn-more]:hover {
+  background-color: inherit;
+  color: white;
+}
+
+.showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  color: rgb(226, 226, 226);
+}
+
+.showcase .bg-image {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+#showcased-product1 .bg-image {
+  background: #333 url(../assets/keyboard/keyboard-stock.jpg) no-repeat
+    center/cover;
+}
+#showcased-product2 .bg-image {
+  background: #333 url(../assets/keyboard/keyboard-stock2.jpg) no-repeat
+    center/cover;
+}
+#showcased-product3 .bg-image {
+  background: #333 url(../assets/keyboard/keyboard-stock3.jpg) no-repeat
+    center/cover;
+}
+
+.showcase h1 {
+  font-size: 2rem;
+  padding: 0.5rem 0rem;
+}
+
+.showcase a {
+  font-weight: 400;
+  padding: 0.5rem 1rem 0 1rem;
+}
+
+.showcase div {padding-bottom: 0.5rem;}
+
+.showcase h2 {padding-bottom: 0.5rem;}
+
+.showcase:last-child {margin-bottom: 0;}
+
+.contact {padding: 2rem 2rem 0;}
+
+.contact p, .contact h2, .contact i, .contact a {color: snow;}
+
+.contact p {line-height: 1.5rem;}
+
+.contact h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.contact i {
+  font-size: 5rem;
+  margin-top: 1rem;
+}
+
+.contact::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  margin: 3rem auto 0;
+}
+
+@media (min-width: 728px) {
+
+  .contact::after {width: 30rem;}
+
+  .comment p, .comment h3 {text-align: left;}
+
+  .comment div {
+    display: inline-block;
+    max-width: 30rem;
+    vertical-align: middle;
   }
 
-  p, h1, h2, h3, h4, h5, h6, a, button, input {
-    font-family: 'Montserrat', sans-serif;
-  }
+  .comment img {margin-right: 1rem;}
 
-  a {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  body {margin: 0;}
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  .product button {
-    border: none;
-    background-color: black;
-    width: 100%;
-    color: white;
-    height: 3rem;
-    font-size: .9rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 1rem 0 .5rem;
-    transition: 0.3s;
-    border: 2px solid black;
-  }
-
-  @media (min-width: 1024px) {
-
-    .product button:hover, .product-added-to-cart button:hover {
-      background-color: white;
-      color: black;
-    }
-
-  }
-
-/* Firefox */
-  input[type=number] {
-    -moz-appearance: textfield;
-  }
-
-
-
-
-  /*===================================
-
-        PRODUCT ADDED TO CART
-
-  =====================================*/
-
-  .product-added-to-cart-bg {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.3);
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
-  .product-added-to-cart {
-    padding: 1rem;
-    background-color: white;
-    width: 90%;
-    z-index: 10;
-    position: fixed;
-    top: calc(50% - 7.5rem);
-    left: 5%;
-  }
-
-  .product-added-to-cart h2 {
-    font-size: 1.5rem;
-    text-align:  center;
-    margin: 1rem 0 1rem;
-    line-height: 1.7rem;
-  }
-
-  .product-added-to-cart button {
-    width: 100%;
-    margin: .5rem 0 0;
-    height: 3rem;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    border: 2px solid black;
-    transition: .3s;
-  }
-
-
-  @media (min-width: 425px) {
-
-    .product-added-to-cart {
-      width: 25rem;
-      left: calc(50% - 12.5rem);
-    }
-
-  }
-
-  @media (min-width: 1024px) {
-
-    .product-added-to-cart {
-      width: 30rem;
-      padding: 2rem;
-      left: calc(50% - 15rem);
-    }
-
-  }
+}

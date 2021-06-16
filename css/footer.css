@@ -1,34 +1,28 @@
-footer {
-  width: 100%;
+#main-footer {
+  padding: 2rem;
+  color: rgb(226, 226, 226);
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 6rem;
   text-align: center;
-  background-color: black;
-  font-size: 1rem;
-  color: snow;
-  padding: .5rem 1rem;
 }
 
-footer p {
-  margin-bottom: 0;
-  letter-spacing: .05rem;
+.footer-links li {
+  cursor: pointer;
+  line-height: 1.3rem;
 }
 
-footer small {line-height: 1.5;}
-
-html, body {
-  height: 100%;
+.footer-links li:hover {
+  text-decoration: underline;
+  color: white;
 }
 
-main {
-  min-height: 100%;
-  margin-bottom: -6rem;
+.footer-links ul {
+  display: flex;
+  flex-direction: row;
 }
 
-main:after {
-  content: "";
-  display: block;
-  height: 6rem;
+.footer-link {
+  padding: 0 10px;
 }
